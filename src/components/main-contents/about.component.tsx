@@ -2,6 +2,8 @@ import { Badge } from "../retroui/Badge";
 import { Card } from "../retroui/Card";
 import { Text } from "../retroui/Text";
 
+import InfoCardIcon from '../../assets/info-card.svg?react';
+
 const skills = [
     "JavaScript",
     "TypeScript",
@@ -26,7 +28,8 @@ export default function About() {
     return (
         <Card className="p-4 mt-4 md:mt-0">
             <Card.Header className="pb-0">
-                <Card.Title>
+                <Card.Title className="flex items-center gap-4 text-primary">
+                    <InfoCardIcon className="w-8 h-8 fill-primary" />
                     About Me
                 </Card.Title>
                 <Card.Description>
@@ -34,19 +37,27 @@ export default function About() {
                 </Card.Description>
             </Card.Header>
             <Card.Content>
-                <Text as="h5">Skills</Text>
+                <Text as="h5" className="text-primary">Skills</Text>
                 <div className="flex flex-wrap gap-2 mt-1">
                     {
                         skills.map((skill, index) => (
-                            <Badge key={index} variant={"outline"}>{skill}</Badge>
+                            <Badge
+                                key={`skill-${index}`}
+                                variant={"default"}
+                                className="text-muted-foreground"
+                            >{skill}</Badge>
                         ))
                     }
                 </div>
-                <Text as="h5" className="mt-2">Area of focus</Text>
+                <Text as="h5" className="mt-2 text-primary">Area of focus</Text>
                 <div className="flex flex-wrap gap-2 mt-1">
                     {
                         areasOfFocus.map((area, index) => (
-                            <Badge key={index} variant={"outline"}>{area}</Badge>
+                            <Badge
+                                key={`aof-${index}`}
+                                variant={"default"}
+                                className="text-muted-foreground"
+                            >{area}</Badge>
                         ))
                     }
                 </div>

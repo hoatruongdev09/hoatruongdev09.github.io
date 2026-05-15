@@ -1,6 +1,8 @@
 import { Card } from "../retroui/Card";
 import ProjectItem from "./project-item.component";
 
+import PortfolioIcon from '../../assets/portfolio.svg?react';
+
 const portfolios = [
     {
         title: "Bag master: Isekai",
@@ -78,7 +80,8 @@ export default function FeaturedPortfolio() {
     return (
         <Card className="p-4 mt-4 ">
             <Card.Header className="pb-0">
-                <Card.Title>
+                <Card.Title className="flex items-center gap-4 text-primary">
+                    <PortfolioIcon className="w-8 h-8 fill-primary" />
                     Featured Portfolios
                 </Card.Title>
             </Card.Header>

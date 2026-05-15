@@ -19,6 +19,7 @@ body {
   margin: 0;
 }
 
+
 @theme inline {
   --font-heading: var(--font-mono);
   --font-mono: 'JetBrains Mono Variable', monospace;
@@ -66,23 +67,11 @@ body {
   --radius: 0;
   --background: #F9F5F2;
   --foreground: #000000;
-  --muted: #EFD0D5;
-  --muted-foreground: #A42439;
   --card: #FFFFFF;
   --card-foreground: #000000;
   --popover: #FFFFFF;
   --popover-foreground: #000000;
-  --border: #000000;
   --input: #FFFFFF;
-  --primary: #EA435F;
-  --primary-hover: #D00000;
-  --primary-foreground: #FFFFFF;
-  --secondary: #FFDA5C;
-  --secondary-foreground: #000000;
-  --accent: #CEEBFC;
-  --accent-foreground: #000000;
-  --destructive: #D00000;
-  --destructive-foreground: #FFFFFF;
   --ring: #000000;
   --chart-1: oklch(0.87 0 0);
   --chart-2: oklch(0.556 0 0);
@@ -97,29 +86,33 @@ body {
   --sidebar-accent-foreground: #000000;
   --sidebar-border: #000000;
   --sidebar-ring: #000000;
-
+  --radius: 0;
+  --background: #f5f5f5;
+  --foreground: #1a1a1a;
+  --card: #FFFFFF;
+  --card-foreground: #f5f5f5;
+  --primary: #5F4FE6;
+  --primary-hover: #4938C2;
+  --primary-foreground: #fff;
+  --secondary: #3a3a3a;
+  --secondary-foreground: #f5f5f5;
+  --muted: #CFCCEA;
+  --muted-foreground: #5B5686;
+  --accent: #FED13B;
+  --accent-foreground: #000000;
+  --destructive: #EF4444;
+  --destructive-foreground: #fff;
+  --border: #3a3a3a;
 }
 
 .dark {
   --background: #0f1210;
   --foreground: #f5f5f5;
-  --muted: #1f3a2d;
-  --muted-foreground: #9cd9b8;
   --card: #181c19;
   --card-foreground: #ffffff;
   --popover: #181c19;
   --popover-foreground: #ffffff;
-  --border: #2a2e2b;
   --input: #2a2e2b;
-  --primary: #599D77;
-  --primary-hover: #39654c;
-  --primary-foreground: #ffffff;
-  --secondary: #3a6f52;
-  --secondary-foreground: #ffffff;
-  --accent: #FFE75A;
-  --accent-foreground: #000000;
-  --destructive: #F05D5D;
-  --destructive-foreground: #ffffff;
   --ring: #599D77;
   --chart-1: oklch(0.87 0 0);
   --chart-2: oklch(0.556 0 0);
@@ -134,6 +127,22 @@ body {
   --sidebar-accent-foreground: #000000;
   --sidebar-border: #2a2e2b;
   --sidebar-ring: #599D77;
+  --background: #0f0f12;
+  --foreground: #f5f5f5;
+  --card: #1a1a1d;
+  --card-foreground: #eaeaea;
+  --primary: #7b6df5;
+  --primary-hover: #5F4FE6;
+  --primary-foreground: #fff;
+  --secondary: #2a2a2e;
+  --secondary-foreground: #eaeaea;
+  --muted: #3d395a;
+  --muted-foreground: #a49fce;
+  --accent: #FED13B;
+  --accent-foreground: #000;
+  --destructive: #EF4444;
+  --destructive-foreground: #fff;
+  --border: #2e2e32;
 }
 
 @layer base {

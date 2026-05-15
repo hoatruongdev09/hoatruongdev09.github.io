@@ -34,11 +34,11 @@ export default function ProjectItem(props: ProjectItemProps) {
                 />
                 <div>
                     <Card.Header className="pb-0">
-                        <Card.Title>
+                        <Card.Title className="text-primary">
                             {props.title}
                         </Card.Title>
                     </Card.Header>
-                    <Card.Content className="pb-0">
+                    <Card.Content className="pb-0 text-muted-foreground">
                         {props.description}
                     </Card.Content>
                 </div>
@@ -49,7 +49,7 @@ export default function ProjectItem(props: ProjectItemProps) {
                 {props.urls?.map((item) => (
                     <Button
                         key={`${props.title}-${item.name}`}
-                        variant={"secondary"}
+                        variant={"default"}
                         size={"sm"}
                         onClick={() => window.open(item.url, "_blank")}
                     >

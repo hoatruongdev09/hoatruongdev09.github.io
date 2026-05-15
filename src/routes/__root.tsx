@@ -2,6 +2,7 @@ import { HeadContent, Outlet, Scripts, createRootRoute } from '@tanstack/react-r
 
 import appCss from '../styles.css?url'
 import Footer from '../components/footer.component'
+import { useTheme } from '../lib/theme-context'
 
 
 export const Route = createRootRoute({
@@ -38,12 +39,13 @@ function RootComponent() {
 }
 
 function RootDocument({ children }: { children: React.ReactNode }) {
+  const { theme } = useTheme();
   return (
     <html lang="en">
       <head>
         <HeadContent />
       </head>
-      <body>
+      <body className={theme}>
         {children}
         {/* <TanStackDevtools
           config={{
