@@ -1,7 +1,8 @@
 import { HeadContent, Outlet, Scripts, createRootRoute } from '@tanstack/react-router'
 
 import appCss from '../styles.css?url'
-import Footer from '#/components/footer.component'
+import Footer from '../components/footer.component'
+
 
 export const Route = createRootRoute({
   head: () => ({
@@ -14,7 +15,7 @@ export const Route = createRootRoute({
         content: 'width=device-width, initial-scale=1',
       },
       {
-        title: 'TanStack Start Starter',
+        title: 'Hoatruongdev Portfolio',
       },
     ],
     links: [

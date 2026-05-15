@@ -1,6 +1,6 @@
-import Intro from '#/components/intro.component'
-import MainContent from '#/components/main-content.component'
 import { createFileRoute } from '@tanstack/react-router'
+import Intro from '../components/intro.component'
+import MainContent from '../components/main-content.component'
 
 export const Route = createFileRoute('/')({ component: Home })
 
