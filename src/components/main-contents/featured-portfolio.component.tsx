@@ -1,4 +1,3 @@
-import type { url } from "inspector";
 import { Card } from "../retroui/Card";
 import ProjectItem from "./project-item.component";
 

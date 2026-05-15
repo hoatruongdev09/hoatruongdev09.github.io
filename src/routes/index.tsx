@@ -1,4 +1,3 @@
-import Footer from '#/components/footer.component'
 import Intro from '#/components/intro.component'
 import MainContent from '#/components/main-content.component'
 import { createFileRoute } from '@tanstack/react-router'

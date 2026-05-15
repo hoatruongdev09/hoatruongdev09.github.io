@@ -46,7 +46,7 @@ export default function ProjectItem(props: ProjectItemProps) {
             <Card.Content
                 className="flex items-center gap-2 justify-end mt-auto"
             >
-                {props.urls?.map((item, index) => (
+                {props.urls?.map((item) => (
                     <Button
                         key={`${props.title}-${item.name}`}
                         variant={"secondary"}
