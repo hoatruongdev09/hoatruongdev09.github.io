@@ -1,0 +1,12 @@
+# https://www.robotstxt.org/robotstxt.html
+User-agent: *
+Allow: /
+
+# Block technical/internal paths if they are exposed in production.
+Disallow: /api/
+Disallow: /_server/
+Disallow: /_build/
+Disallow: /admin/
+
+# Update this to your production sitemap URL when available.
+# Example: Sitemap: https://your-domain.com/sitemap.xml
