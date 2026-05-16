@@ -78,14 +78,14 @@ const portfolios = [
 
 export default function FeaturedPortfolio() {
     return (
-        <Card className="p-4 mt-4 ">
-            <Card.Header className="pb-0">
+        <Card className="p-2 md:p-4 mt-4 ">
+            <Card.Header className="p-1">
                 <Card.Title className="flex items-center gap-4 text-primary">
                     <PortfolioIcon className="w-8 h-8 fill-primary" />
                     Featured Portfolios
                 </Card.Title>
             </Card.Header>
-            <Card.Content className="flex flex-col xl:grid xl:grid-cols-3 gap-4">
+            <Card.Content className="p-1 flex flex-col xl:grid xl:grid-cols-3 gap-4">
                 {
                     portfolios.map((portfolio, index) => (
                         <ProjectItem

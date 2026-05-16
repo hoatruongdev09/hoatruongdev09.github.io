@@ -67,14 +67,14 @@ const educations = [
 export default function Resume() {
     return (
         <>
-            <Card className="p-4 mt-4 w-full">
-                <Card.Header className="pb-0">
+            <Card className="p-2 md:p-4 mt-4 w-full">
+                <Card.Header className="p-1">
                     <Card.Title className="flex items-center gap-4 text-primary">
                         <BriefCaseIcon className="w-8 h-8 fill-primary" />
                         Experience
                     </Card.Title>
                 </Card.Header>
-                <Card.Content>
+                <Card.Content className="p-1">
                     {
                         experiences.map((item, index) => (
                             <div
@@ -110,14 +110,14 @@ export default function Resume() {
                 </Card.Content>
             </Card>
 
-            <Card className="p-4 mt-4 w-full">
-                <Card.Header className="pb-0">
+            <Card className="p-2 md:p-4 mt-4 w-full">
+                <Card.Header className="p-1">
                     <Card.Title className="flex items-center gap-4 text-primary">
                         <GraduationCapIcon className="w-8 h-8 fill-primary" />
                         Education
                     </Card.Title>
                 </Card.Header>
-                <Card.Content>
+                <Card.Content className="p-1">
                     {
                         educations.map((item, index) => (
                             <div

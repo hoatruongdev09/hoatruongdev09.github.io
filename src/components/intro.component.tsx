@@ -10,9 +10,9 @@ import SunIcon from '../assets/sun.svg?react';
 export default function Intro() {
     const { theme, toggleTheme } = useTheme();
     return (
-        <Card className="p-4 flex flex-row md:flex-col items-center gap-2 left-0 top-8 sticky">
-            <img src="/avatar.jpeg" alt="Avatar" className="w-28 h-28 object-cover" />
-            <div className="flex flex-col items-start gap-2">
+        <Card className="p-2 md:p-4 flex flex-row md:flex-col items-start md:items-center gap-2 left-0 top-8 sticky">
+            <img src="/avatar.jpeg" alt="Avatar" className="w-18 h-18 mt-1.5 md:mt-0 md:w-28 md:h-28 object-cover rounded border border-primary" />
+            <div className="flex flex-col items-start md:items-center">
                 <Text as="h3" className="text-primary">hoatruongdev</Text>
                 <Text as="h6" className="text-muted-foreground">Software Developer</Text>
                 <div className="flex items-center justify-center md:w-full gap-2">

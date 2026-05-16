@@ -26,8 +26,8 @@ const areasOfFocus = [
 
 export default function About() {
     return (
-        <Card className="p-4 mt-4 md:mt-0">
-            <Card.Header className="pb-0">
+        <Card className="p-2 md:p-4 mt-4 md:mt-0">
+            <Card.Header className="p-1">
                 <Card.Title className="flex items-center gap-4 text-primary">
                     <InfoCardIcon className="w-8 h-8 fill-primary" />
                     About Me
@@ -36,7 +36,7 @@ export default function About() {
                     Software developer with 5 years of experience building high-performance backend systems and interactive games. Proficient in designing RESTful APIs with NestJS/Node.js, modeling relational databases with PostgreSQL, and delivering cross-platform games with Unity & C#. Passionate about clean architecture, maintainable code, and smooth user experiences.
                 </Card.Description>
             </Card.Header>
-            <Card.Content>
+            <Card.Content className="p-1">
                 <Text as="h5" className="text-primary">Skills</Text>
                 <div className="flex flex-wrap gap-2 mt-1">
                     {

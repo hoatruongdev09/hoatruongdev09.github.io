@@ -8,7 +8,7 @@ export const Route = createFileRoute('/')({ component: Home })
 function Home() {
   return (
     <>
-      <div className="p-8 flex flex-col gap-0 md:flex-row md:gap-4">
+      <div className="p-1 md:p-8 flex flex-col gap-0 md:flex-row md:gap-4">
         <div className="relative">
           <Intro />
         </div>
