@@ -1,73 +1,102 @@
-# React + TypeScript + Vite
+# Portfolio Personal Page
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Source code for Hoa Truong's personal portfolio page.
 
-Currently, two official plugins are available:
+- Live site: [https://hoatruongdev09.github.io](https://hoatruongdev09.github.io)
+- This repository is used to showcase personal information, experience, and featured projects.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## Preview
 
-## React Compiler
+Main sections:
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- Intro (avatar, social links, theme toggle)
+- About
+- Resume
+- Featured Portfolio
 
-## Expanding the ESLint configuration
+## Tech Stack
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+- React 19 + TypeScript
+- Vite
+- TanStack Router (file-based routing, hash history)
+- Tailwind CSS v4
+- shadcn/ui utilities + custom Retro UI components
+- gh-pages (deploy static build to GitHub Pages)
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+## Run Local
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+Requirements:
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+- Node.js 18+ (Node.js 20+ recommended)
+- npm
+
+1. Install dependencies
+
+```bash
+npm install
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+2. Start the development server
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```bash
+npm run dev
 ```
+
+3. Open the URL shown by Vite in your browser (usually `http://localhost:5173`)
+
+## Scripts
+
+- `npm run dev`: run local development
+- `npm run build`: type-check and create a production build in `dist/`
+- `npm run preview`: preview the local production build
+- `npm run lint`: run ESLint
+- `npm run deploy`: deploy `dist/` to GitHub Pages (via `gh-pages`)
+
+## Deploy GitHub Pages
+
+The project is already configured with the `homepage` field in `package.json`:
+
+```json
+"homepage": "https://hoatruongdev09.github.io"
+```
+
+To deploy:
+
+```bash
+npm run deploy
+```
+
+This command will:
+
+1. Automatically build the project (`predeploy`)
+2. Push the `dist/` content to the `gh-pages` branch
+
+## Project Structure
+
+```text
+src/
+  components/
+    intro.component.tsx
+    main-content.component.tsx
+    footer.component.tsx
+    main-contents/
+      about.component.tsx
+      resume.component.tsx
+      featured-portfolio.component.tsx
+  routes/
+    __root.tsx
+    index.tsx
+  lib/
+    theme-context.tsx
+  router.tsx
+  main.tsx
+```
+
+## Notes
+
+- The router uses hash history for safe static hosting on GitHub Pages.
+- Portfolio content is currently managed directly in the component code.
+
+## License
+
+MIT
